@@ -5,34 +5,58 @@
     <title>Simple Form</title>
     <style>
         input{
-    margin-top: 10px;
+    margin-top: 20px;
   }
   button{
+    padding: 3px 10px;
     margin-top: 20px;
+    background: rgb(12, 12, 105);
+    color: white;
+    outline: none;
+    border: none;
+  }
+  label{
+    font-weight:bold ;
+  }
+  fieldset{
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: max-content;
+    margin: auto;
+    padding: 30px 20px;
+  }
+  input{
+    padding: 3px;
+    outline: none;
   }
     </style>
   </head>
   <body>
-    <form id="myForm" method="post">
+    <fieldset>
+      <legend>SIGN UP</legend>
+    <form name="myForm" id="form" method="post" onsubmit="return false;">
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required><br>
+      <input type="text" id="name" placeholder="Name" required><br>
 
       <label for="email">Email address:</label>
-      <input type="email" id="email" name="email" ><br>
+      <input type="email" id="email" placeholder="Email" ><br>
 
       <label for="phone">Phone number:</label>
-      <input type="tel" id="phone" name="phone" required><br>
+      <input type="tel" id="phone" placeholder="Mobile Number" required><br>
 
       <label for="gender">Gender:</label>
-        <input type="radio" name="gender" id="gender">Male 
-        <input type="radio" name="gender" id="gender">Female 
+        <input type="radio" name="gender">Male 
+        <input type="radio" name="gender">Female 
       <br>
 
       <label for="password">Password:</label>
       <input type="password" id="password" name="password" required><br>
 
       <button type="submit" onclick="welcome()">Submit</button>
-    </form></body>
+    </form>
+  </fieldset>
+  </body>
     <script>
         function welcome(){
             alert("Form has been successfully submitted");
